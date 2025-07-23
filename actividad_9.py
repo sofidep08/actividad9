@@ -31,3 +31,10 @@ while opcion !=3:
                 print("Cliente registrado")
             case 2:
                 print("Clientese registrados")
+                for codigo_cliente, datos in clientes.items():
+                    print(f"Codigo de cliente: {codigo_cliente}")
+                    print(f"Nombre: {datos['nombre']}")
+
+                    for codigo_viaje, lugares in datos["visitas"].items():
+                        print(f"Codigo de viaje: {codigo_viaje}")
+                        print("Destino: ", lugares["destino"])
