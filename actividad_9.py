@@ -28,12 +28,12 @@ while opcion !=3:
                     if destinos <= 0 or destinos >5:
                         print("Ingreso un dato incorrecto")
                     else:
-                        sumar(destinos)
+
                         for j in range(destinos):
                             codigo_viaje=int(input("Ingrese el codigo de viaje del destino: "))
-                            destino= input("Destino ", j+1 , ": ")
+                            lugar= input("ingrese el lugar: ")
                             clientes[codigo_cliente]["visitas"][codigo_viaje]={
-                                "visita" : destino
+                                "visita" : lugar
                             }
                 print("Cliente registrado")
             case 2:
