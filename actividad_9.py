@@ -38,3 +38,5 @@ while opcion !=3:
                     for codigo_viaje, lugares in datos["visitas"].items():
                         print(f"Codigo de viaje: {codigo_viaje}")
                         print("Destino: ", lugares["destino"])
+            case 3:
+                print("Saliendo del menu...")
