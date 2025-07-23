@@ -1,3 +1,9 @@
+def sumar(cantidades):
+    if cantidades==0:
+        return cantidades
+    else:
+        return cantidades + sumar(cantidades+1)
+
 clientes = {}
 opcion = 0
 while opcion !=3:
@@ -22,6 +28,7 @@ while opcion !=3:
                     if destinos <= 0 or destinos >5:
                         print("Ingreso un dato incorrecto")
                     else:
+                        sumar(destinos)
                         for j in range(destinos):
                             codigo_viaje=int(input("Ingrese el codigo de viaje del destino: "))
                             destino= input("Destino ", j+1 , ": ")
@@ -38,5 +45,7 @@ while opcion !=3:
                     for codigo_viaje, lugares in datos["visitas"].items():
                         print(f"Codigo de viaje: {codigo_viaje}")
                         print("Destino: ", lugares["destino"])
+
+                print("Total de desinos visitados por todos los clientes ", sumar(()))
             case 3:
                 print("Saliendo del menu...")
